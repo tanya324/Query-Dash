@@ -1,0 +1,38 @@
+.upl-page{min-height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:40px 24px;position:relative}
+.u-dots{position:fixed;inset:0;background-image:radial-gradient(circle,rgba(0,184,217,0.1) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.u-box{position:relative;z-index:1;width:100%;max-width:600px;display:flex;flex-direction:column;gap:16px;animation:fadeUp .4s ease}
+.u-title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-.02em;text-align:center;color:var(--tx)}
+.u-sub{font-size:14px;color:var(--t2);text-align:center;font-weight:300}
+.dz{border:2px dashed var(--t3);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:9px;cursor:pointer;transition:all .2s;background:rgba(255,255,255,0.01)}
+.dz:hover{border-color:var(--cy);background:var(--ct)}
+.dz-ic{width:52px;height:52px;border-radius:10px;background:var(--ct);border:1px solid var(--cd);display:flex;align-items:center;justify-content:center}
+.dz-lbl{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--tx)}
+.dz-hint{font-size:13px;color:var(--t2);font-weight:300}
+.btn-ol{background:transparent;border:1px solid var(--bh);border-radius:6px;padding:8px 20px;color:var(--cy);font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:.04em;cursor:pointer;margin-top:4px;transition:all .15s}
+.btn-ol:hover{background:var(--ct);border-color:var(--cy)}
+.prog-bar{width:200px;height:3px;background:var(--t4);border-radius:4px;overflow:hidden;margin-top:4px}
+.prog-fill{height:100%;background:var(--cy);border-radius:4px;transition:width .2s}
+.u-err{background:var(--rt);border:1px solid rgba(230,57,70,.3);border-radius:8px;padding:12px 16px;font-size:13px;color:var(--rd);font-family:var(--font-mono)}
+.f-row{background:var(--card);border:1px solid var(--bo);border-radius:10px;padding:12px 15px;display:flex;align-items:center;gap:11px}
+.f-ic{width:32px;height:32px;background:var(--ct);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.f-nm{font-size:13px;font-weight:500;color:var(--tx)}
+.f-meta{font-family:var(--font-mono);font-size:10px;color:var(--t2);margin-top:1px}
+.verified{display:flex;align-items:center;gap:6px;margin-left:auto}
+.v-lbl{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;color:#22c55e;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:4px;padding:2px 7px}
+.v-d{width:6px;height:6px;border-radius:50%;background:#22c55e}
+.sch-sec{display:flex;flex-direction:column;gap:10px}
+.sch-hdr{display:flex;align-items:center;justify-content:space-between}
+.sch-title{font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--tx)}
+.sch-badge{font-family:var(--font-mono);font-size:10px;color:var(--cy);background:var(--ct);border:1px solid var(--cd);border-radius:4px;padding:3px 8px;letter-spacing:.06em}
+.sch-tw{background:var(--card);border:1px solid var(--bo);border-radius:10px;overflow:hidden}
+.sch-t{width:100%;border-collapse:collapse}
+.sch-t th{padding:9px 13px 7px;text-align:left;border-bottom:1px solid var(--bo);background:var(--card2)}
+.cn{font-family:var(--font-mono);font-size:10px;color:var(--tx);letter-spacing:.06em}
+.ct{font-family:var(--font-mono);font-size:9px;color:var(--cy);margin-top:1px}
+.sch-t td{padding:8px 13px;font-family:var(--font-mono);font-size:11px;color:var(--t2);border-bottom:1px solid rgba(255,255,255,0.03)}
+.sch-t tr:last-child td{border-bottom:none}
+.nc{color:var(--cy)!important}
+.or-sep{text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--t3)}
+.btn-start{background:var(--yl);color:#000;border:none;border-radius:8px;padding:17px;font-family:var(--font-display);font-size:18px;font-weight:800;letter-spacing:.05em;cursor:pointer;transition:background .15s;width:100%}
+.btn-start:hover{background:var(--yh)}
+.trust{display:flex;justify-content:center;gap:22px;font-family:var(--font-mono);font-size:10px;color:var(--t3)}
