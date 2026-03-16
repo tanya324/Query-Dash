@@ -2,21 +2,6 @@
 
 <br/>
 
-```
-╔═══════════════════════════════════════════════════════╗
-║                                                       ║
-║    ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗        ║
-║   ██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝        ║
-║   ██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝         ║
-║   ██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝          ║
-║   ╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║            ║
-║    ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝           ║
-║                                                       ║
-║           D  A  S  H                                  ║
-║                                                       ║
-╚═══════════════════════════════════════════════════════╝
-```
-
 ### **Conversational AI for Instant Business Intelligence**
 *Ask a question in plain English. Get a live interactive dashboard in seconds.*
 
@@ -42,7 +27,7 @@
 
 ## 📖 Table of Contents
 
-- [What is Query Dash?](#-what-is-query-dash)
+- [What is PromptBI?](#-what-is-PromptBI)
 - [Live Demo](#-live-demo)
 - [Features](#-features)
 - [How It Works](#-how-it-works)
@@ -56,16 +41,16 @@
 
 ---
 
-## 🧠 What is Query Dash?
+## 🧠 What is PromptBI?
 
-**Query Dash** is an AI-powered Business Intelligence platform that eliminates the gap between business questions and data answers.
+**PromptBI** is an AI-powered Business Intelligence platform that eliminates the gap between business questions and data answers.
 
 In most organisations, getting a simple chart requires:
 1. Writing a ticket to the data team
 2. Waiting 2–3 days
 3. Receiving a static screenshot
 
-**Query Dash changes this entirely.** A non-technical executive types a question in plain English — and within seconds, a fully interactive, multi-chart dashboard appears. No SQL. No BI tool training. No waiting.
+**PromptBI changes this entirely.** A non-technical executive types a question in plain English — and within seconds, a fully interactive, multi-chart dashboard appears. No SQL. No BI tool training. No waiting.
 
 ### Who is it for?
 
@@ -118,29 +103,29 @@ In most organisations, getting a simple chart requires:
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                                                             │
-│   User types: "Show monthly views by category"             │
-│                        │                                   │
-│                        ▼                                   │
-│   ┌─────────────────────────────────────────┐             │
-│   │           FASTAPI BACKEND               │             │
-│   │                                         │             │
-│   │  1. Inject schema context into prompt   │             │
-│   │  2. Call Gemini 2.0 Flash               │             │
-│   │  3. Receive SQL + chart config as JSON  │             │
-│   │  4. Validate & execute SQL on SQLite    │             │
-│   │  5. Self-correct if SQL fails           │             │
-│   │  6. Return chart data to frontend       │             │
-│   └─────────────────────────────────────────┘             │
-│                        │                                   │
-│                        ▼                                   │
-│   React renders interactive Recharts dashboard             │
+│   User types: "Show monthly views by category"              │
+│                        │                                    │
+│                        ▼                                    │
+│   ┌─────────────────────────────────────────┐               │
+│   │           FASTAPI BACKEND               │               │
+│   │                                         │               │
+│   │  1. Inject schema context into prompt   │               │
+│   │  2. Call Gemini 2.0 Flash               │               │
+│   │  3. Receive SQL + chart config as JSON  │               │
+│   │  4. Validate & execute SQL on SQLite    │               │
+│   │  5. Self-correct if SQL fails           │               │
+│   │  6. Return chart data to frontend       │               │
+│   └─────────────────────────────────────────┘               │
+│                        │                                    │
+│                        ▼                                    │
+│   React renders interactive Recharts dashboard              │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ### The Prompt Engineering Pipeline
 
-What makes Query Dash accurate is not just calling an LLM — it's **what we tell the LLM before every query**:
+What makes PromptBI accurate is not just calling an LLM — it's **what we tell the LLM before every query**:
 
 1. **Schema Injection** — Full table structure, column names, data types, and value ranges are prepended to every prompt so Gemini never guesses column names
 2. **Chart Selection Rules** — Explicit rules map data shapes to chart types (time-series → line, categorical → bar, parts-of-whole → pie)
@@ -168,7 +153,7 @@ What makes Query Dash accurate is not just calling an LLM — it's **what we tel
 ## 📁 Project Structure
 
 ```
-Query-Dash/
+PromptBI/
 │
 ├── 📂 backend/
 │   ├── main.py           ← FastAPI server (API routes)
@@ -213,8 +198,8 @@ Make sure you have these installed:
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/tanya324/Query-Dash.git
-cd Query-Dash
+git clone https://github.com/your_github_account_here/.git
+cd PromptBI
 ```
 
 **2. Set up the backend**
@@ -254,8 +239,8 @@ npm run dev
 ### Option B — Run with Docker (One Command)
 
 ```bash
-git clone https://github.com/tanya324/Query-Dash.git
-cd Query-Dash
+git clone https://github.com/your_github_account_here/PromptBI.git
+cd PromptBI
 
 # Add your API key to a .env file in the root
 echo "GEMINI_API_KEY=your_api_key_here" > .env
@@ -388,17 +373,8 @@ Then ask:  "Which of these regions has the best sentiment score?"
 | Name | Role |
 |---|---|
 | Tanya Srivastava | Backend + AI/ML + Project Lead |
-| Suraj Singh Guleria | Frontend + UI/UX |
+| Suraj Singh Guleria | Integrating Docker with Frontend and Backend |
 | Samkit Jain | Frontend + UI/UX |
-
-*B.Tech — Artificial Intelligence & Data Science*
-*Semester 4 — Under the guidance of Dr. Neha Garg*
-
----
-
-## 📄 License
-
-This project was built as part of a B.Tech academic hackathon project.
 
 ---
 
@@ -408,7 +384,7 @@ This project was built as part of a B.Tech academic hackathon project.
 
 *Built with 🤖 Gemini AI · ⚡ FastAPI · ⚛️ React*
 
-**Query Dash — because data should answer to you, not the other way around.**
+**PromptBI — because data should answer to you, not the other way around.**
 
 <br/>
 
